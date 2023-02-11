@@ -13,9 +13,9 @@ This is a Garbage Truck Route simulator. Drag and drop a .txt file containing a 
 40.7326, -73.9950
 ```
 
-This app will get the directions for that route via [OSRM](https://github.com/Project-OSRM/osrm-backend) routing engine and visualize the driving route inside the app's window.
+This app will get the directions for that route and visualize the driving route inside the app's window.
 
 ![image](https://user-images.githubusercontent.com/50047346/218276694-62feee76-01f3-4600-961a-477b7f78a40f.png)
 
 ## Inner Workings
-A OSRM request is made with the coordinates obtained from the drag and dropped .txt file. The polyline from the response containing the route is used to create a [folium](https://github.com/python-visualization/folium) map with markers showing the distance between each dumpster. Last dumpster also shows total driving distance.
+An [OSRM](https://github.com/Project-OSRM/osrm-backend) request is made with the coordinates obtained from the drag and dropped .txt file. The polyline from the response containing the route is used to create a [folium](https://github.com/python-visualization/folium) map with markers showing the distance between each dumpster. Last dumpster also shows total driving distance.
