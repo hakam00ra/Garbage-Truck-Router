@@ -28,7 +28,7 @@ class WorkerSignals(QObject):
 class Window(QLabel):
     def __init__(self):
         super().__init__()
-        self.threadpool = QThreadPool()
+        #self.threadpool = QThreadPool()
         self.setAlignment(Qt.AlignCenter)
         self.map = QWebEngineView()
         self.map.hide()
