@@ -39,5 +39,5 @@ poly = polyline.decode(res['routes'][0]['geometry'])
 
 ### Folium route
 ```py
-folium.PolyLine(route, color="red", weight=2.5, opacity=1, dash_array='10').add_to(map)
+folium.PolyLine(poly, color="red", weight=2.5, opacity=1, dash_array='10').add_to(map)
 ```
