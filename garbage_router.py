@@ -124,7 +124,7 @@ class App(QWidget):
         folium.PolyLine(route, color="red", weight=2.5, opacity=1).add_to(map)
 
         for coord in coordinates:
-            folium.Marker(coord).add_to(map)
+            folium.Marker(coord, popup="????").add_to(map)
 
         map.save("map.html")
         #webbrowser.open("map.html")
