@@ -19,3 +19,25 @@ This app will get the directions for that route and visualize the driving route 
 
 ## Inner Workings
 An [OSRM](https://github.com/Project-OSRM/osrm-backend) request is made with the coordinates obtained from the drag and dropped .txt file. The polyline from the response containing the route is used to create a [folium](https://github.com/python-visualization/folium) map with markers showing the distance between each dumpster. Last dumpster also shows total driving distance.
+
+### Coordinates
+```py
+coords = ";".join(f"{coord[1]},{coord[0]}" for coord in coordinates)
+```
+
+### Request
+```py
+url = f"https://router.project-osrm.org/route/v1/driving/{coords}"
+response = requests.get(url)
+res = response.json()
+```
+
+### Polyline
+```py
+poly = polyline.decode(res['routes'][0]['geometry'])
+```
+
+### Folium route
+```py
+folium.PolyLine(route, color="red", weight=2.5, opacity=1, dash_array='10').add_to(map)
+```
