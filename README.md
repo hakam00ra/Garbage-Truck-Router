@@ -13,7 +13,7 @@ This is a Garbage Truck Route simulator. Drag and drop a .txt file containing a 
 40.7326, -73.9950
 ```
 
-This app will get the directions for that route and visualize the driving route inside the app's window.
+This app will get the directions for that route and visualize the driving route inside the app's window. User can drag and drop a different file inside the already created map.
 
 ![image](https://user-images.githubusercontent.com/50047346/218276694-62feee76-01f3-4600-961a-477b7f78a40f.png)
 
